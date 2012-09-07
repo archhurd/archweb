@@ -6,7 +6,6 @@ from django.db import models
 class Migration(SchemaMigration):
 
     def forwards(self, orm):
-        db.delete_index('packages', ['pkgname'])
         db.create_unique('packages', ['pkgname', 'repo_id', 'arch_id'])
 
     def backwards(self, orm):
