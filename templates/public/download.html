@@ -3,32 +3,30 @@
 {% load url from future %}
 {% load static from staticfiles %}
 
-{% block title %}Arch Linux - Downloads{% endblock %}
+{% block title %}Arch Hurd - Downloads{% endblock %}
 {% block navbarclass %}anb-download{% endblock %}
 
 {% block content %}
-{% with version="2012.08.04" kernel_version="3.4.7" %}
+{% with version="i686-core-2011-08-17" %}
 <div id="arch-downloads" class="box">
 
-    <h2>Arch Linux Downloads</h2>
+    <h2>Arch Hurd Downloads</h2>
 
     <h3>Release Info</h3>
 
-    <p>The image can be burned to a CD, mounted as an ISO file,
-    or be directly written to a USB stick using a utility like `dd`. It
-    is intended for new installations only; an existing Arch Linux system
+    <p>The image can be burned to a CD or mounted as an ISO file. It
+    is intended for new installations only; an existing Arch Hurd system
     can always be updated with `pacman -Syu`.</p>
 
     <ul>
         <li><strong>Current Release:</strong> {{ version }}</li>
-        <li><strong>Included Kernel:</strong> {{ kernel_version }}</li>
-        <li><a href="https://wiki.archlinux.org/index.php/Installation_Guide">Installation Guide</a></li>
+        <li><a href="http://wiki.archhurd.org/wiki/Installation_Guide">Installation Guide</a></li>
         <li><strong>Resources:</strong>
             <ul>
-                <li><a href="https://bugs.archlinux.org/index.php?project=6"
-                    title="Arch Linux Bugtracker:Release Engineering">Bug Tracker</a></li>
-                <li><a href="https://mailman.archlinux.org/mailman/listinfo/arch-releng"
-                    title="Arch Linux Release Engineering mailing list">Mailing List</a></li>
+                <li><a href="http://bugs.archhurd.org/index.php?project=4"
+                    title="Arch Hurd Bugtracker:Livecd / Installer">Bug Tracker</a></li>
+                <li><a href="http://lists.archhurd.org/"
+                    title="Arch Hurd mailing lists">Mailing Lists</a></li>
             </ul>
         </li>
     </ul>
@@ -39,54 +37,20 @@
     to update your existing system. You may be looking for
     <a href="{% url 'mirrorlist' %}">an updated mirrorlist</a> instead.</p>
 
-    <h3>BitTorrent Download (recommended)</h3>
+    <h3>Direct Downloads</h3>
 
-    <p>If you can spare the bytes, please leave the client open after your
-    download is finished, so you can seed it back to others.
-    <em>A web-seed capable client is recommended for fastest download speeds.</em></p>
-    <ul>
-        <li><a href="https://www.archlinux.org/iso/{{version}}/archlinux-{{version}}-dual.iso.torrent"
-                    title="Download for both architectures">Download archlinux-{{version}}-dual.iso.torrent</a></li>
-    </ul>
-
-    <h3>Netboot</h3>
-
-    <p>If you have a wired connection, you can boot the latest release directly over the network.</p>
-    <ul>
-      <li><a href="{{ releng_pxeboot_url }}"
-          title="Arch Linux Netboot Live System">Arch Linux Netboot</a></li>
-    </ul>
-
-    <h3>Test ISO Info</h3>
-
-    <p>We provide daily snapshot ISOs. Those are largely untested,
-    but may be more up to date than the releases.</p>
-    <ul>
-        <li><a href="{{ releng_iso_url }}"
-            title="Release Engineering ISO download">Download snapshots</a></li>
-        <li><a href="{{ releng_pxeboot_url }}"
-            title="Arch Linux Netboot Live System">Boot latest snapshots over the network</a></li>
-        <li><a href="{% url 'releng-test-overview' %}"
-            title="Release Engineering ISO feedback">Feedback</a></li>
-    </ul>
-
-    <h3>HTTP Direct Downloads</h3>
-
-    <p>In addition to the BitTorrent links above, install images can also be
-    downloaded via HTTP from the mirror sites listed below. Please
-    ensure the download image matches the checksum from the md5sums.txt or
-    sha1sums.txt file in the same directory as the image.</p>
+    <p>Install images can be downloaded via HTTP and FTP from the mirror
+    sites listed below. Please ensure the download image matches the checksum
+    from the md5sums.txt or sha1sums.txt file in the same directory as the image.</p>
 
     <h4>Checksums</h4>
 
     <p>File integrity checksums for the latest releases can be found below:</p>
 
     <ul>
-        <li><a href="https://www.archlinux.org/iso/{{version}}/archlinux-{{version}}-dual.iso.sig"
-            title="Get the latest PGP signature">PGP signature</a></li>
-        <li><a href="https://www.archlinux.org/iso/{{version}}/sha1sums.txt"
+        <li><a href="ftp://www.archhurd.org/livecd/sha1sums.txt"
             title="Get the latest SHA1 checksums">SHA1 checksums</a></li>
-        <li><a href="https://www.archlinux.org/iso/{{version}}/md5sums.txt"
+        <li><a href="ftp://www.archhurd.org/livecd/md5sums.txt"
             title="Get the latest MD5 checksums">MD5 checksums</a></li>
     </ul>
 
@@ -98,16 +62,16 @@
         {% else %}<h5>Worldwide</h5>{% endif %}
         <ul>
             {% for mirror_url in country.list %}
-            <li><a href="{{ mirror_url.url }}iso/{{ version }}/"
-                title="Download from {{ mirror_url.url }}iso/{{ version }}/">{{ mirror_url.mirror.name }}</a></li>
+            <li><a href="{{ mirror_url.url }}livecd/"
+                title="Download from {{ mirror_url.url }}livecd/">{{ mirror_url.mirror.name }}</a></li>
             {% endfor %}
         </ul>
         {% endfor %}
     </div>
     {% endcache %}
 
-    <p>If you want to become an Official Arch Linux Mirror please follow the
-    instructions listed <a href="https://wiki.archlinux.org/index.php/DeveloperWiki:NewMirrors">here</a>.</p>
+    <p>If you want to become an Official Arch Hurd Mirror please send a message
+     to <a href="http://lists.archhurd.org/">the mailing list</a>.</p>
 
 </div>
 {% endwith %}
