@@ -1,7 +1,7 @@
 {% load url from future %}{% load static from staticfiles %}<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{% block title %}Arch Linux{% endblock %}</title>
+    <title>{% block title %}Arch Hurd{% endblock %}</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="{% static "archweb.css" %}" media="screen, projection" />
     <link rel="stylesheet" type="text/css" href="{% static "archweb-print.css" %}" media="print" />
@@ -21,11 +21,10 @@
             <ul id="archnavbarlist">
                 <li id="anb-home"><a href="/" title="Arch news, packages, projects and more">Home</a></li>
                 <li id="anb-packages"><a href="/packages/" title="Arch Package Database">Packages</a></li>
-                <li id="anb-forums"><a href="https://bbs.archlinux.org/" title="Community forums">Forums</a></li>
-                <li id="anb-wiki"><a href="https://wiki.archlinux.org/" title="Community documentation">Wiki</a></li>
-                <li id="anb-bugs"><a href="https://bugs.archlinux.org/" title="Report and track bugs">Bugs</a></li>
-                <li id="anb-aur"><a href="https://aur.archlinux.org/" title="Arch Linux User Repository">AUR</a></li>
-                <li id="anb-download"><a href="{% url 'page-download' as pdl %}{{ pdl }}" title="Get Arch Linux">Download</a></li>
+                <li id="anb-wiki"><a href="http://wiki.archhurd.org/" title="Community documentation">Wiki</a></li>
+                <li id="anb-aur"><a href="http://aur.archhurd.org/" title="Arch Hurd User Repository">AUR</a></li>
+                <li id="anb-bugs"><a href="http://bugs.archhurd.org/" title="Report and track bugs">Bugs</a></li>
+                <li id="anb-download"><a href="{% url 'page-download' as pdl %}{{ pdl }}" title="Get Arch Hurd">Download</a></li>
             </ul>
         </div>
     </div>
@@ -70,18 +69,17 @@
                 {% block content_right %}{% endblock %}
             </div>
         {% endblock %}
-        <div id="footer">
-            <p>Copyright &copy; 2002-{% now "Y" %} <a href="mailto:jvinet@zeroflux.org"
-                title="Contact Judd Vinet">Judd Vinet</a> and <a href="mailto:aaron@archlinux.org"
-                title="Contact Aaron Griffin">Aaron Griffin</a>.</p>
-
-            <p>The Arch Linux name and logo are recognized
-            <a href="https://wiki.archlinux.org/index.php/DeveloperWiki:TrademarkPolicy"
-                title="Arch Linux Trademark Policy">trademarks</a>. Some rights reserved.</p>
-
-            <p>The registered trademark Linux® is used pursuant to a sublicense from LMI,
-            the exclusive licensee of Linus Torvalds, owner of the mark on a world-wide basis.</p>
-        </div>
+    <div id="footer">
+      <div id="mainfoot">
+        <p><a href="http://www.gnu.org/software/hurd/" title="The Hurd">The Hurd</a> is a <a href="http://www.gnu.org" title="GNU">GNU</a> project.<br/>
+          <a href="http://www.archlinux.org" title="Archlinux">Archlinux</a> Copyright &copy; 2002-2010 Judd Vinet and Aaron Griffin.<br/>
+          The Arch Linux name and logo are recognized trademarks. Some rights reserved.</p>
+      </div>
+      
+      <div id="leftfoot">
+        <p>Find us in <strong>#archhurd</strong> on <strong>irc.freenode.net</strong>.<br/>
+          Or join us on the <a href="http://lists.archhurd.org" title="mailing lists">mailing lists</a>.</p>
+      </div>
     </div>
 </body>
 </html>
