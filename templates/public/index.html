@@ -4,8 +4,8 @@
 {% load static from staticfiles %}
 
 {% block head %}
-<link rel="alternate" type="application/rss+xml" title="Arch Linux News Updates" href="/feeds/news/" />
-<link rel="alternate" type="application/rss+xml" title="Arch Linux Package Updates" href="/feeds/packages/" />
+<link rel="alternate" type="application/rss+xml" title="Arch Hurd News Updates" href="/feeds/news/" />
+<link rel="alternate" type="application/rss+xml" title="Arch Hurd Package Updates" href="/feeds/packages/" />
 {% endblock %}
 
 {% block content_left %}
@@ -112,110 +112,49 @@
 </div>
 
 <div id="nav-sidebar" class="widget">
-    <h4>Documentation</h4>
+    <h4>Resources</h4>
 
     <ul>
-        <li><a href="https://wiki.archlinux.org/"
+        <li><a href="https://wiki.archhurd.org/"
             title="Community documentation">Wiki</a></li>
-        <li><a href="https://wiki.archlinux.org/index.php/Official_Arch_Linux_Install_Guide"
+        <li><a href="http://wiki.archhurd.org/wiki/Installation_Guide"
             title="Official installation guide">Official Installation Guide</a></li>
-        <li><a href="https://wiki.archlinux.org/index.php/Beginners'_Guide"
-            title="A good place to start for beginners">Unofficial Beginners' Guide</a></li>
-    </ul>
-
-    <h4>Community</h4>
-
-    <ul>
-        <li><a href="https://mailman.archlinux.org/mailman/listinfo/"
-            title="Community and developer mailing lists">Mailing Lists</a></li>
-        <li><a href="https://wiki.archlinux.org/index.php/IRC_Channels"
-            title="Official and regional IRC communities">IRC Channels</a></li>
-        <li><a href="https://planet.archlinux.org/"
-            title="Arch in the blogosphere">Planet Arch</a></li>
-        <li><a href="https://wiki.archlinux.org/index.php/International_Communities"
-            title="Arch communities in your native language">International Communities</a></li>
+        <li><a href="http://lists.archhurd.org"
+            title="Developer mailing lists">Mailing Lists</a></li>
     </ul>
 
     <h4>Support</h4>
 
     <ul>
-        <li><a href="{% url 'page-donate' %}" title="Help support Arch Linux">Donate</a></li>
-        <li><a href="http://schwag.archlinux.ca/"
-            title="USB keys, jewellery, case badges">Arch Schwag</a></li>
-        <li><a href="http://www.zazzle.com/archlinux*"
-            title="T-shirts, mugs, mouse pads, hoodies, posters, skateboards, shoes, etc.">Products via Zazzle</a></li>
-        <li><a href="http://www.freewear.org/?page=list_items&amp;org=Archlinux"
-            title="T-shirts">T-shirts via Freewear</a></li>
-    </ul>
-
-    <h4>Tools</h4>
-
-    <ul>
-        <li><a href="{% url 'mirrorlist' %}"
-            title="Get a custom mirrorlist from our database">Mirrorlist Updater</a></li>
-        <li><a href="{% url 'mirror-status' %}"
-            title="Check the status of all known mirrors">Mirror Status</a></li>
-        <li><a href="{% url 'packages-differences' %}"
-            title="See differences in packages between available architectures">Differences Reports</a>
-        <img width="16" height="16" src="{% static "new.png" %}" alt="New"/></li>
+        <li><a href="{% url 'page-donate' %}" title="Help support Arch Hurd">Donate</a></li>
+        <li><a href="http://www.zazzle.co.uk/archhurd"
+            title="Products via Zazzle">Arch Hurd Schwag</a></li>
     </ul>
 
     <h4>Development</h4>
 
     <ul>
-        <li><a href="https://projects.archlinux.org/"
+        <li><a href="https://github.com/archhurd"
             title="Official Arch projects (git)">Projects in Git</a></li>
-        <li><a href="{% url 'page-svn' %}"
-            title="View SVN entries for packages">SVN Repositories</a></li>
-        <li><a href="https://wiki.archlinux.org/index.php/DeveloperWiki"
+        <li><a href="http://wiki.archhurd.org/wiki/DeveloperWiki"
             title="Developer Wiki articles">Developer Wiki</a></li>
         <li><a href="/groups/"
             title="View the available package groups">Package Groups</a></li>
         <li><a href="/todolists/"
             title="Developer Todo Lists">Todo Lists</a></li>
-        <li><a href="{% url 'releng-test-overview' %}"
-            title="Releng Testbuild Feedback">Releng Testbuild Feedback</a></li>
-        <li><a href="{% url 'visualize-index' %}"
-            title="View visualizations">Visualizations</a>
-        <img width="16" height="16" src="{% static "new.png" %}" alt="New"/></li>
     </ul>
 
     <h4>More Resources</h4>
 
     <ul>
-        <li><a href="{% url 'page-keys' %}"
-            title="Package/Database signing master keys">Signing Master Keys</a>
-        <img width="16" height="16" src="{% static "new.png" %}" alt="New"/></li>
-        <li><a href="https://wiki.archlinux.org/index.php/Arch_Linux_Press_Review"
-            title="Arch Linux in the media">Press Coverage</a></li>
         <li><a href="{% url 'page-art' %}" title="Arch logos and other artwork for promotional use">Logos &amp; Artwork</a></li>
         <li><a href="{% url 'news-list' %}" title="News Archives">News Archives</a></li>
         <li><a href="/feeds/" title="Various RSS Feeds">RSS Feeds</a></li>
         <li><a href="{% url 'page-devs' %}" title="Active developers">Developer Profiles</a></li>
-        <li><a href="{% url 'page-tus' %}" title="Active Trusted Users (TUs)">Trusted User Profiles</a></li>
         <li><a href="{% url 'page-fellows' %}" title="Retired Developers">Fellows Profiles</a></li>
     </ul>
 
 </div>
 
-<div id="home-donate-button" class="widget">
-    <a href="https://co.clickandpledge.com/Default.aspx?WID=47294">
-        <img width="210" height="34" src="{% static "CP_EN_BK_S_001.gif" %}" alt="Donate via Click&amp;Pledge to Arch Linux" title="Donate via Click&amp;Pledge to Arch Linux"/>
-    </a>
-</div>
-
-<div id="arch-sponsors" class="widget">
-
-    <a href="http://www.velocitynetwork.net/?hosting_by=ArchLinux" title="Velocity Network">
-        <img width="252" height="58" src="{% static "vnet_button.png" %}" alt="Velocity Network - It's about time" />
-    </a>
-    <a href="http://www.7l.com/" title="7L Networks">
-        <img width="252" height="58" src="{% static "sevenl_button.png" %}" alt="7L Networks Inc." />
-    </a>
-    <a href="http://www.airvm.com/ArchLinux" title="AirVM.com - Your Green Technology Partner">
-        <img width="252" height="58" src="{% static "airvm_button.png" %}" alt="AirVM.com - Your Green Technology Partner" />
-    </a>
-
-</div>
 {% endcache %}
 {% endblock %}
