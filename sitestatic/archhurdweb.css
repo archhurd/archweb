@@ -31,7 +31,7 @@ div#content-right {
 div#archnavbar
 {
     height: 120px;
-    background-image: url(static/header.png)
+    background-image: url(/static/header.png)
 }
 
 div#archnavbar h1 a
@@ -40,7 +40,7 @@ div#archnavbar h1 a
     height: 120px;
     display: block;
     float: left;
-    background-image: url(static/logotrans.png);
+    background-image: url(/static/logotrans.png);
     text-indent: -9999px;
 }
 
