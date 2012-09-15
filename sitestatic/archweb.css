@@ -9,9 +9,6 @@
  *
  */
 
-/* import the global navbar stylesheet */
-@import url('archnavbar/archnavbar.css');
-
 /* simple reset */
 * {
     margin: 0;

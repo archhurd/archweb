@@ -26,6 +26,45 @@ div#content-right {
     right: 40px;
 }
 
+/* Header */
+
+div#archnavbar
+{
+    height: 120px;
+    background-image: url(static/header.png)
+}
+
+div#archnavbar h1 a
+{
+    width: 360px;
+    height: 120px;
+    display: block;
+    float: left;
+    background-image: url(static/logotrans.png);
+    text-indent: -9999px;
+}
+
+div#archnavbar ul
+{
+    list-style-type: none;
+    position: absolute;
+    right: 24px;
+    top:   50px;
+}
+
+div#archnavbar ul li
+{
+    display: block;
+    float: right;
+    margin: 0px 24px 0px 24px;
+}
+
+div#archnavbar ul li a:active, div#archnavbar ul li a:hover, div#archnavbar ul li a:link, div#archnavbar ul li a:visited, div#archnavbar ul li.selected
+{
+    font-size: 16px;
+    color: #dddddd;
+}
+
 /* Footer */
 
 div#footer
