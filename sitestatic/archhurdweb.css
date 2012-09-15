@@ -1,3 +1,10 @@
+/* General */
+
+html, body
+{
+    height: 100%;
+}
+
 /* Footer */
 
 div#footer
