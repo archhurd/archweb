@@ -16,6 +16,7 @@
     {% block head %}{% endblock %}
 </head>
 <body class="{% if user.is_authenticated %}devmode {% endif %}{% block bodyclass %}{% endblock %}">
+<div id="container">
     <div id="archnavbar" class="{% block navbarclass %}anb-home{% endblock %}">
         <div id="archnavbarlogo"><h1><a href="/" title="Return to the main page">Arch Linux</a></h1></div>
         <div id="archnavbarmenu">
@@ -82,5 +83,6 @@
           Or join us on the <a href="http://lists.archhurd.org" title="mailing lists">mailing lists</a>.</p>
       </div>
     </div>
+</div>
 </body>
 </html>

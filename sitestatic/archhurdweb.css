@@ -5,6 +5,15 @@ html, body
     height: 100%;
 }
 
+#container {
+    min-height: 100%;
+    position: relative;
+}
+
+#content {
+    padding-bottom: 114px;
+}
+
 /* Footer */
 
 div#footer
