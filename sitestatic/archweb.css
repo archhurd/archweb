@@ -1053,6 +1053,3 @@ ul.signoff-list {
     width: 100%;
     height: 100%;
 }
-
-/* Import Arch Hurd style changes */
-@import url('archhurdweb.css')
