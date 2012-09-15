@@ -14,6 +14,18 @@ html, body
     padding-bottom: 114px;
 }
 
+div#content-left {
+    margin: 0 340px 0 0;
+    padding-bottom: 24px;
+}
+
+div#content-right {
+    width: 300px;
+    position: absolute;
+    top: 100px;
+    right: 40px;
+}
+
 /* Footer */
 
 div#footer
