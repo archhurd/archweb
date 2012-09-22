@@ -120,7 +120,7 @@ def generate_report(email, repo_name):
         'old_days': old_days,
         'leaders': leaders,
     })
-    from_addr = 'Arch Website Notification <nobody@archlinux.org>'
+    from_addr = 'Arch Website Notification <nobody@archhurd.org>'
     send_mail(subject, t.render(c), from_addr, [email])
 
 # vim: set ts=4 sw=4 et:

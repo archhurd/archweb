@@ -124,7 +124,7 @@ def flag(request, name, repo, arch):
                 })
                 send_mail(subject,
                         tmpl.render(ctx),
-                        'Arch Website Notification <nobody@archlinux.org>',
+                        'Arch Website Notification <nobody@archhurd.org>',
                         toemail,
                         fail_silently=True)
 

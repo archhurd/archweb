@@ -73,10 +73,10 @@ class UserFinder(object):
     def username_email(name, email):
         if email and '@' in email:
             # split email addr at '@' symbol, ensure domain matches
-            # or is a subdomain of archlinux.org
+            # or is a subdomain of archhurd.org
             # TODO: configurable domain/regex somewhere?
             username, domain = email.split('@', 1)
-            if re.match(r'^(.+\.)?archlinux.org$', domain):
+            if re.match(r'^(.+\.)?archhurd.org$', domain):
                 return User.objects.get(username=username)
         return None
 

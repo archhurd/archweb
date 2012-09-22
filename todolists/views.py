@@ -179,7 +179,7 @@ def send_todolist_emails(todo_list, new_packages):
         template = loader.get_template('todolists/email_notification.txt')
         send_mail('Packages added to todo list \'%s\'' % todo_list.name,
                 template.render(ctx),
-                'Arch Website Notification <nobody@archlinux.org>',
+                'Arch Website Notification <nobody@archhurd.org>',
                 [maint],
                 fail_silently=True)
 

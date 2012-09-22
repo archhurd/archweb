@@ -364,7 +364,7 @@ class NewUserForm(forms.ModelForm):
 
         send_mail("Your new archweb account",
                 template.render(ctx),
-                'Arch Website Notification <nobody@archlinux.org>',
+                'Arch Website Notification <nobody@archhurd.org>',
                 [user.email],
                 fail_silently=False)
 

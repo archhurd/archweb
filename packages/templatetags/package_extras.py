@@ -91,15 +91,14 @@ def packager_link(user):
 
 @register.simple_tag
 def scm_link(package, operation):
-    parts = (package.repo.svn_root, operation, package.pkgbase)
+    parts = (package.repo.name, package.pkgbase)
     linkbase = (
-        "https://projects.archlinux.org/svntogit/%s.git/%s/trunk?"
-        "h=packages/%s")
+        "https://github.com/archhurd/packages/tree/master/%s/%s")
     return linkbase % tuple(urlquote(part) for part in parts)
 
 @register.simple_tag
 def get_wiki_link(package):
-    url = "https://wiki.archlinux.org/index.php/Special:Search"
+    url = "http://wiki.archhurd.org/wiki/Special:Search"
     data = {
         'search': package.pkgname,
     }
@@ -107,7 +106,7 @@ def get_wiki_link(package):
 
 @register.simple_tag
 def bugs_list(package):
-    url = "https://bugs.archlinux.org/"
+    url = "http://bugs.archhurd.org/"
     data = {
         'project': package.repo.bugs_project,
         'cat[]': package.repo.bugs_category,
@@ -117,7 +116,7 @@ def bugs_list(package):
 
 @register.simple_tag
 def bug_report(package):
-    url = "https://bugs.archlinux.org/newtask"
+    url = "http://bugs.archhurd.org/newtask"
     data = {
         'project': package.repo.bugs_project,
         'product_category': package.repo.bugs_category,
