@@ -2,79 +2,38 @@
 {% load cache %}
 {% load static from staticfiles %}
 
-{% block title %}Arch Linux - Donate{% endblock %}
+{% block title %}Arch Hurd - Donate{% endblock %}
 
 {% block content %}
 {% cache 600 donations secure %}
 <div id="donations" class="box">
 
-    <h2>Donate to Arch Linux</h2>
+    <h2>Donate to Arch Hurd</h2>
 
-    <p>Arch Linux survives because of the tireless efforts of many people in
-    the community and the core development circle.  None of us are paid for
-    our work, and we don't have the personal funds to sustain server costs
-    ourselves.</p>
+    <p>Currently we accept donations through Paypal and Flattr. Donations are used to pay for our server.</p>
 
-    <p>There are many ways to help support Arch Linux.  If technical development,
-    documentation, or support aren't your strong points, you could certainly
-    help us by dropping a few bucks our way.</p>
+        <h4><a name="paypal" id="paypal"></a>Paypal</h4>
+        
+        <fieldset class="centre">
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="paypal">
+            <fieldset>
+              <input type="hidden" name="cmd" value="_s-xclick"/>
+              <input type="hidden" name="hosted_button_id" value="5L6FGRX3CW9W2"/>
+              <input type="image" src="https://www.paypal.com/en_GB/i/btn/btn_donate_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online."/>
+              <img alt="" src="https://www.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1"/>
+            </fieldset>
+          </form>
+        </fieldset>
 
-    <p>Many thanks!</p>
+        <h4><a name="flattr" id="flattr"></a>Flattr</h4>
 
-    <h3>Monetary donations</h3>
+        <div class="centre">
+          <a href="http://flattr.com/thing/44395/Arch-Hurd">
+            <img src="http://api.flattr.com/button/button-static-50x60.png" alt="Flattr this" title="Flattr this" />
+          </a>
+        </div>
 
-    <p>Financial contributions are accepted via <a href="https://co.clickandpledge.com/Default.aspx?WID=47294" title="Donate via Click&amp;Pledge to Arch Linux">Click&amp;Pledge</a>.
-    Arch Linux is a member project of the
-    <a href="http://www.spi-inc.org/">Software in the Public Interest, Inc.</a>
-    non-profit corporation. Funds are used for hosting costs, server hardware
-    upgrades, and more. You are encouraged to learn more about the SPI, as well
-    as <a href="http://www.spi-inc.org/donations/">how donations work</a>.</p>
-
-    <a href="https://co.clickandpledge.com/Default.aspx?WID=47294">
-        <img width="210" height="34" src="{% static "CP_EN_BK_S_001.gif" %}" alt="Donate via Click&amp;Pledge to Arch Linux" title="Donate via Click&amp;Pledge to Arch Linux"/>
-    </a>
-
-    <h3>Commercial sponsors and contributions</h3>
-
-    <p>We'd like to thank <a href="http://www.velocitynetwork.net/?hosting_by=ArchLinux"
-        title="velocity network">Velocity Network</a> for contributing space
-    in a server rack, bandwidth, and electricity for our main server.</p>
-
-    <a href="http://www.velocitynetwork.net/?hosting_by=ArchLinux"
-        title="velocity network"><img width="252" height="58" src="{% static "vnet_button.png" %}" class="sponsor-btn-vnet"
-        title="" alt="velocity network - it's about time" /></a>
-
-    <p>We also wish to extend a special thank you to <a
-        href="http://www.7l.com/"
-        title="7L Networks - Dedicated Arch Linux servers">7L Networks</a>
-    for their generous and ongoing contribution of a dedicated Arch Linux
-    server. You too can have a dedicated Arch Linux server, or your <a
-        href="https://www.7l.com/business-hosting-solutions/Toronto-Colocation-Hosting-Provider.html"
-        title="7L Networks - Server Colocation">server colocation service</a>,
-    with 7L. Head over to their website for more details.</p>
-
-    <a href="http://www.7l.com/"
-        title="7L Networks - Dedicated Arch Linux servers"><img width="252" height="58" src="{% static "sevenl_button.png" %}"
-        class="sponsor-btn-sevenl" title="A big Thank You to 7L Networks for their generous contribution"
-        alt="We would like to express our thanks to 7L Networks for their generous contribution" /></a>
-
-    <p>More thanks go to <a href="http://www.airvm.com/ArchLinux"
-        title="AirVM.com">AirVM.com</a> for contributing a VMWare-based Virtual Machine.</p>
-
-    <a href="http://www.airvm.com/ArchLinux"
-        title="AirVM.com - Your Green Technology Partner"><img width="252" height="58" src="{% static "airvm_button.png" %}"
-        class="sponsor-btn-airvm" title="AirVM.com - Your Green Technology Partner" alt="AirVM.com - Your Green Technology Partner" /></a>
-
-    <h3>Past donors</h3>
-
-    <div id="donor-list">
-        <ul>
-{% for donor in donors %}
-<li>{{ donor.name }}</li>{% endfor %}
-        </ul>
-    </div>
-    <div class="clear"></div>
-    <p>A huge thanks to you all for your contributions!</p>
+        <p>Flattr is a social payment system which enables users to make a small donation once a month which is distributed between all of the things they have flattred in that month.</p>
 </div>
 {% endcache %}
 {% endblock %}

@@ -29,11 +29,11 @@ def index(request):
 USER_LISTS = {
     'devs': {
         'user_type': 'Developers',
-        'description': "This is a list of the current Arch Linux Developers. They maintain the [core] and [extra] package repositories in addition to doing any other developer duties.",
+        'description': "This is a list of the current Arch Hurd Developers. They maintain the [core] and [extra] package repositories in addition to doing any other developer duties.",
     },
     'tus': {
         'user_type': 'Trusted Users',
-        'description': "Here are all your friendly Arch Linux Trusted Users who are in charge of the [community] repository.",
+        'description': "Here are all your friendly Arch Hurd Trusted Users who are in charge of the [community] repository.",
     },
     'fellows': {
         'user_type': 'Fellows',

@@ -70,7 +70,7 @@ class PackageFeed(Feed):
         return obj
 
     def title(self, obj):
-        s = 'Arch Linux: Recent package updates'
+        s = 'Arch Hurd: Recent package updates'
         if 'repo' in obj and 'arch' in obj:
             s += ' (%s [%s])' % (obj['arch'].name, obj['repo'].name.lower())
         elif 'repo' in obj:
@@ -80,7 +80,7 @@ class PackageFeed(Feed):
         return s
 
     def description(self, obj):
-        s = 'Recently updated packages in the Arch Linux package repositories'
+        s = 'Recently updated packages in the Arch Hurd package repositories'
         if 'arch' in obj:
             s += ' for the \'%s\' architecture' % obj['arch'].name.lower()
             if not obj['arch'].agnostic:
@@ -122,9 +122,9 @@ def news_last_modified(request, *args, **kwargs):
 class NewsFeed(Feed):
     feed_type = GuidNotPermalinkFeed
 
-    title = 'Arch Linux: Recent news updates'
+    title = 'Arch Hurd: Recent news updates'
     link = '/news/'
-    description = 'The latest and greatest news from the Arch Linux distribution.'
+    description = 'The latest and greatest news from the Arch Hurd distribution.'
     subtitle = description
     title_template = 'feeds/news_title.html'
     description_template = 'feeds/news_description.html'
