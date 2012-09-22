@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon" sizes="72x72" href="{% static "logos/apple-touch-icon-72x72.png" %}" />
     <link rel="apple-touch-icon" sizes="114x114" href="{% static "logos/apple-touch-icon-114x114.png" %}" />
     <link rel="apple-touch-icon" sizes="144x144" href="{% static "logos/apple-touch-icon-144x144.png" %}" />
-    <link rel="search" type="application/opensearchdescription+xml" href="{% url 'opensearch-packages' as osp %}{{ osp }}" title="Arch Linux Packages" />
+    <link rel="search" type="application/opensearchdescription+xml" href="{% url 'opensearch-packages' as osp %}{{ osp }}" title="Arch Hurd Packages" />
     {% block head %}{% endblock %}
 </head>
 <body class="{% if user.is_authenticated %}devmode {% endif %}{% block bodyclass %}{% endblock %}">
@@ -33,16 +33,12 @@
             {% if user.is_authenticated %}
                 <ul>
                     <li><a href="{% url 'devel-index' %}" title="Developer Dashboard">Dashboard</a></li>
-                    <li><a href="https://wiki.archlinux.org/index.php/DeveloperWiki"
+                    <li><a href="http://wiki.archhurd.org/wiki/DeveloperWiki"
                         title="Developer Wiki">DevWiki</a></li>
                     <li><a href="{% url 'news-list' as newsl %}{{ newsl }}" title="Manage news articles">News</a></li>
                     <li><a href="/packages/signoffs/" title="Package signoffs">Signoffs</a></li>
                     <li><a href="/todo/" title="Developer todo lists">Todos</a></li>
                     <li><a href="{% url 'devel-clocks' %}" title="Developer world clocks">Dev Clocks</a></li>
-                    <li><a href="https://mailman.archlinux.org/mailman/private/arch-dev/"
-                        title="arch-dev mailing list archives">Archives</a></li>
-                    <li><a href="/mirrors/" title="Mirror server statistics">Mirrors</a></li>
-                    <li><a href="https://stats.archlinux.org/munin/"
                         title="Arch server monitoring">Server Monitoring</a></li>
                     {% if user.is_staff %}
                     <li><a href="{% url 'admin:index' %}" title="Django Admin Interface">Django Admin</a></li>

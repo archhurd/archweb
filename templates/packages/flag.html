@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load package_extras %}
 
-{% block title %}Arch Linux - Flag Package - {{ package.pkgname }} {{ package.full_version }} ({{ package.arch.name }}){% endblock %}
+{% block title %}Arch Hurd - Flag Package - {{ package.pkgname }} {{ package.full_version }} ({{ package.arch.name }}){% endblock %}
 {% block head %}<meta name="robots" content="noindex"/>{% endblock %}
 {% block navbarclass %}anb-packages{% endblock %}
 
@@ -23,13 +23,13 @@
     <p>The message box portion of the flag utility is optional, and meant
     for short messages only. If you need more than 200 characters for your
     message, then file a bug report, email the maintainer directly, or send
-    an email to the <a href="https://mailman.archlinux.org/mailman/listinfo/arch-general"
-        title="Visit the arch-general mailing list">arch-general mailing list</a>
+    an email to the <a href="http://lists.archhurd.org/"
+        title="Visit the mailing lists">devel mailing list</a>
     with your additional text.</p>
 
     <p><strong>Note:</strong> Do <em>not</em> use this facility if the
     package is broken! The package will be unflagged and the report will be ignored!
-    <a href="https://bugs.archlinux.org/" title="Arch Linux Bugtracker">Use the
+    <a href="http://bugs.archhurd.org/" title="Arch Hurd Bugtracker">Use the
     bugtracker to file a bug</a> instead.</p>
 
     <p>Please confirm your flag request for {{package.pkgname}}:</p>

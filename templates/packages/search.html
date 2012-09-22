@@ -2,13 +2,13 @@
 {% load package_extras %}
 {% load admin_static %}
 
-{% block title %}Arch Linux - Package Database{% endblock %}
+{% block title %}Arch Hurd - Package Database{% endblock %}
 {% block navbarclass %}anb-packages{% endblock %}
 
 {% block head %}
 {% if is_paginated and page_obj.number > 1 %}<meta name="robots" content="noindex, nofollow"/>{% endif %}
 <link rel="stylesheet" type="text/css" href="{% static "admin/css/widgets.css" %}" />
-<link rel="alternate" type="application/rss+xml" title="Arch Linux Package Updates" href="/feeds/packages/" />
+<link rel="alternate" type="application/rss+xml" title="Arch Hurd Package Updates" href="/feeds/packages/" />
 {% endblock %}
 
 {% block content %}
@@ -114,16 +114,16 @@
     <p>We couldn't find any packages matching your query. Try searching again
     using different criteria, or try
     {% if search_form.q.data %}
-    <a href="https://aur.archlinux.org/packages.php?K={{ search_form.q.data|urlencode }}">searching the AUR</a>
-    {% else %}searching the <a href="https://aur.archlinux.org/">AUR</a>{% endif %}
+    <a href="http://aur.archhurd.org/packages.php?K={{ search_form.q.data|urlencode }}">searching the AUR</a>
+    {% else %}searching the <a href="http://aur.archhurd.org/">AUR</a>{% endif %}
     to see if the package can be found there.</p>
 </div>
 {% endif %}
 
 <div id="pkglist-about" class="box">
-    <p>You are browsing the Arch Linux package database. From here you can find
+    <p>You are browsing the Arch Hurd package database. From here you can find
     detailed information about packages located in the official supported repositories.
-    For unsupported packages, browse the <a href="https://aur.archlinux.org/"
+    For unsupported packages, browse the <a href="http://aur.archhurd.org/"
         title="AUR package database">Arch User Repository (AUR).</a></p>
 </div>
 

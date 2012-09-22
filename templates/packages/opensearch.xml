@@ -1,9 +1,9 @@
 {% load static from staticfiles %}<?xml version="1.0" encoding="UTF-8"?>
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
 	<ShortName>Arch Packages</ShortName>
-	<LongName>Arch Linux Package Repository Search</LongName>
-	<Description>Search the Arch Linux package repositories by keyword in package names and descriptions.</Description>
-	<Tags>linux archlinux package software</Tags>
+	<LongName>Arch Hurd Package Repository Search</LongName>
+	<Description>Search the Arch Hurd package repositories by keyword in package names and descriptions.</Description>
+	<Tags>hurd archhurd package software</Tags>
 	<Image height="16" width="16" type="image/x-icon">{{ domain }}{% static "favicon.ico" %}</Image>
 	<Image height="64" width="64" type="image/png">{{ domain }}{% static "logos/icon-transparent-64x64.png" %}</Image>
 	<Language>en-us</Language>
