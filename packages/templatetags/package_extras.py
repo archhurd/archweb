@@ -91,7 +91,7 @@ def packager_link(user):
 
 @register.simple_tag
 def scm_link(package, operation):
-    parts = (package.repo.name, package.pkgbase)
+    parts = (package.repo.name.lower(), package.pkgbase)
     linkbase = (
         "https://github.com/archhurd/packages/tree/master/%s/%s")
     return linkbase % tuple(urlquote(part) for part in parts)
